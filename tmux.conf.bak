@@ -1,0 +1,67 @@
+##########################################
+# STATUS BAR
+set -g status-utf8 on
+set -g status-keys vi
+set -g status-interval 1
+set -g status-attr bright
+set -g status-fg white
+set -g status-bg black 
+set -g status-left-length 20
+set -g status-left '#[fg=green][#[fg=red]#S#[fg=green]]#[default]'
+set -g status-justify centre
+set -g status-right '#[fg=green][ %m/%d %H:%M:%S ]#[default]'
+
+
+
+
+##########################################
+# TERMINAL EMULATOR TITLES
+set -g set-titles on
+set -g set-titles-string "#(tmux ls | awk -F: '{print $1}' | xargs | sed 's/\ / | /g')"
+
+#########################################
+# KEY BINDINGS
+# C-b = prefix
+unbind C-b
+set-option -g prefix C-Space
+bind-key C-Space send-prefix
+
+# split panes using | and -
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
+
+# switch panes using Alt-arrow without prefix
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# reload config file (change file location to your the tmux.conf you want to use)
+bind r source-file ~/.dotfiles/tmux/tmux.conf \; display-message "Config reloaded..."
+bind-key M split-window -h "vim ~/.dotfiles/tmux/tmux.conf"
+
+##########################################
+# BASIC CONFIG
+
+# Enable mouse control (clickable windows, panes, resizable panes)
+setw -g mode-mouse on
+set -g mouse-select-window on
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+
+# Scroll History
+set -g history-limit 30000
+
+# don't rename windows automatically
+set-option -g allow-rename off
+
+# use the external theme
+#source ~/.dotfiles/tmux/tmux_theme.sh
+
+if '[ -f ./tmux.conf.local ]' 'source ./tmux.conf.local'
+
+
+
+
