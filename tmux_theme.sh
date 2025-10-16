@@ -28,7 +28,7 @@ set -g status-left '#{prefix_highlight}#[fg=colour232,bg=colour154] #S #[fg=colo
 
 # Format for the window names
 setw -g window-status-format "#[fg=colour234,bg=colour234,nobold,nounderscore,noitalics]>#[default] #I #W #[fg=colour234,bg=colour234,nobold,nounderscore,noitalics]>"
-setw -g window-status-current-format "#[fg=colour234,bg=colour31,nobold,nounderscore,noitalics]>#[fg=colour231,bg=colour31,bold] #I > #W #[fg=colour31,bg=colour234,nobold,nounderscore,noitalics]>"
+setw -g window-status-current-format "#[fg=colour234,bg=colour31,nobold,nounderscore,noitalics]>#[fg=colour231,bg=colour31,bold] (#I) #W #[fg=colour31,bg=colour234,nobold,nounderscore,noitalics]"
 
 # status right
 set -g status-right "#[fg=colour236,bg=colour234]<#[fg=colour250,bg=colour236] #(/bin/bash $HOME/.dotfiles/tmux/kube.tmux 250 red cyan) #(/bin/bash $HOME/.dotfiles/tmux/battery.sh #000000) #[fg=colour232,bg=colour236]<#[fg=colour250,bg=colour232] #h #[fg=colour252,bg=colour236,nobold,nounderscore,noitalics]"
