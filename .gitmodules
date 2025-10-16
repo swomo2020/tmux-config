@@ -1,0 +1,21 @@
+[submodule "plugins/tpm"]
+	path = plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "plugins/tmux-gruvbox"]
+	path = plugins/tmux-gruvbox
+	url = https://github.com/egel/tmux-gruvbox.git
+[submodule "plugins/tmux-nova"]
+	path = plugins/tmux-nova
+	url = https://github.com/o0th/tmux-nova.git
+[submodule "plugins/tmux-prefix-highlight"]
+	path = plugins/tmux-prefix-highlight
+	url = https://github.com/tmux-plugins/tmux-prefix-highlight.git
+[submodule "plugins/tmux-resurrect"]
+	path = plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect.git
+[submodule "plugins/tmux-sensible"]
+	path = plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible.git
+[submodule "plugins/tmux-sidebar"]
+	path = plugins/tmux-sidebar
+	url = https://github.com/tmux-plugins/tmux-sidebar.git
